@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ArsipController;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\BeritaAcara;
+use App\Http\Controllers\BeritaAcaraController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FotoAsetController;
 use App\Http\Controllers\GaleriController;
@@ -45,7 +47,6 @@ Route::get('/home-program-kerja', [ProgramKerjaController::class, 'home'])->name
 Route::get('/home-galeri', [GaleriController::class, 'home'])->name('galeri.home');
 Route::get('/home-kegiatan', [KegiatanController::class, 'home'])->name('kegiatan.home');
 Route::get('/agenda', [AgendaController::class, 'index'])->name('agenda');
-Route::get('/arsip', [ArsipController::class, 'index'])->name('arsip');
 Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
@@ -76,6 +77,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('laporankeuangan', LaporanKeuanganController::class);
     Route::resource('suratkeputusan', SuratKeputusanController::class);
     Route::resource('suratperintahtugas', SuratPerintahTugasController::class);
+    Route::resource('beritaacara', BeritaAcaraController::class);
 
     // home arsip
     Route::get('/arsip', [ArsipController::class, 'index'])->name('arsip');
@@ -88,4 +90,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/arsip-profil-anggota', [ArsipController::class, 'profilanggota'])->name('arsip.profilanggota');
     Route::get('/arsip-surat-keputusan', [ArsipController::class, 'suratkeputusan'])->name('arsip.suratkeputusan');
     Route::get('/arsip-surat-perintah-tugas', [ArsipController::class, 'suratperintahtugas'])->name('arsip.suratperintahtugas');
+    Route::get('/arsip-berita-acara', [ArsipController::class, 'beritaacara'])->name('arsip.beritaacara');
 });

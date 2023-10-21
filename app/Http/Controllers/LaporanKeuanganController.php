@@ -36,7 +36,7 @@ class LaporanKeuanganController extends Controller
             'judul' => 'required',
             'kategori' => 'required',
             'tahun' => 'required',
-            'file' => 'required|mimes:pdf,xlsx,csv|max:10000',
+            'file' => 'required|mimes:pdf,xlsx,csv,docx,doc|max:10000',
         ]);
 
         $input = $request->all();
@@ -81,7 +81,7 @@ class LaporanKeuanganController extends Controller
             'judul' => 'required',
             'kategori' => 'required',
             'tahun' => 'required',
-            'file' => 'required|mimes:pdf,xlsx,csv|max:10000',
+            'file' => 'required|mimes:pdf,xlsx,csv,docx,doc|max:10000',
         ]);
 
         $input = $request->all();

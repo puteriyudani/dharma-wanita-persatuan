@@ -91,7 +91,7 @@ class UndanganKeluarController extends Controller
             'tanggal' => 'required',
             'bulan' => 'required',
             'tahun' => 'required',
-            'file' => 'required|mimes:pdf,xlx,csv|max:2048',
+            'file' => 'required|mimes:pdf,xlsx,csv,docx,doc|max:10000',
         ]);
 
         $input = $request->all();
@@ -137,7 +137,7 @@ class UndanganKeluarController extends Controller
             'tanggal' => 'required',
             'bulan' => 'required',
             'tahun' => 'required',
-            'file' => 'required|mimes:pdf,xlx,csv|max:2048',
+            'file' => 'required|mimes:pdf,xlsx,csv,docx,doc|max:10000',
         ]);
 
         $input = $request->all();

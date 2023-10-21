@@ -14,6 +14,7 @@
         <a href="{{ route('laporankeuangan.index') }}"><p>Laporan Keuangan</p></a>
         <a href="{{ route('suratkeputusan.index') }}"><p>Surat Keputusan</p></a>
         <a href="{{ route('suratperintahtugas.index') }}"><p>Surat Perintah Tugas</p></a>
+        <a href="{{ route('beritaacara.index') }}"><p>Berita Acara</p></a>
 
     </div>
 @endsection

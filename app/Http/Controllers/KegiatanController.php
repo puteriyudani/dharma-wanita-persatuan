@@ -44,7 +44,7 @@ class KegiatanController extends Controller
         $request->validate([
             'judul' => 'required',
             'tahun' => 'required',
-            'file' => 'required|mimes:pdf,xlsx,csv,docx|max:10000',
+            'file' => 'required|mimes:pdf,xlsx,csv,docx,doc|max:10000',
         ]);
 
         $input = $request->all();
@@ -88,7 +88,7 @@ class KegiatanController extends Controller
         $request->validate([
             'judul' => 'required',
             'tahun' => 'required',
-            'file' => 'required|mimes:pdf,xlsx,csv,docx|max:10000',
+            'file' => 'required|mimes:pdf,xlsx,csv,docx,doc|max:10000',
         ]);
 
         $input = $request->all();
